@@ -50,17 +50,36 @@ nav{
     display: flex;
 }
 
+#logo, #archive{
+    flex: 50%;
+    display: flex;
+    align-self: center;
+}
+
 h1{
     font-family: 'Tilt Neon', cursive;
     font-size: 48px;
-    color: var(--silver);
+    color: var(--orange);
     align-self: center;
 }
 
 h2{
     font-family: 'Tilt Neon', cursive;
     font-size: 36px;
+    color: var(--orange);
+}
+
+h3{
+    font-family: 'Tilt Neon', cursive;
+    font-size: 36px;
+    padding-right: 10px;
     color: var(--silver);
+    transition: color 0.3s;
+}
+
+h3:hover{
+    color: var(--purplight);
+    cursor: pointer;
 }
 
 p{
@@ -71,6 +90,7 @@ p{
 
 b{
     font-style: italic;
+    color: var(--silver);
 }
 
 main{
@@ -83,7 +103,7 @@ main{
 
 #about{
     text-align: center;
-    margin: 0 10% 3% 10%;
+    margin: 2% 20% 0 20%;
 }
 
 footer{
@@ -91,27 +111,39 @@ footer{
     bottom: 0;
     width: 100%;
     text-align: center;
+    
 }
 
 footer svg{
     display: inline;
     cursor: pointer;
+    transition: width 0.3s;
+    transition: height 0.3s;
 }
 
 footer svg:hover{
     fill: var(--purplight);
+    width: 72px;
+    height: 72px;
 }
 
 @media (min-width: 800px) {
-    #desc, #playerCont{
-        width: 50%;
+    #desc{
+        width: 60%;
         height: 400px;
+    }
+
+    #playerCont{
+        width: 40%;
     }
 
     #desc{
         display: flex;
         flex-direction: column;
         align-self: center;
+        padding-top: 100px;
+        padding-left: 20%;
+        padding-right: 20px;
     }
 
     #player{
